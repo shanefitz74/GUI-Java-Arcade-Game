@@ -1,43 +1,22 @@
-# Attribution List
+# Provenance and Originality
 
-Proper attribution should be given for all assets (e.g., art, sound, music, etc.) that is not
-authored by members of your project team.
+## Current rebuild
 
-## Assets
+The `agent/arcade-accurate-rebuild` branch contains a clean-room JavaFX game
+named **APE ASCENT: Ironworks**.
 
-* Barrel
-  - `resources/sprites/barrel.png`
-  - Nintendo 1981.
-  - http://pixelartmaker.com/art/f78639ad73fb6ad
-  - Public Domain
+The current playable game uses no external image, music, sound, ROM, or font
+assets. Platforms, ladders, barrels, characters, the hammer, particles, and
+interface elements are drawn procedurally by `ArcadeAscent.java` using JavaFX
+Canvas primitives.
 
-* DonkeyKong
-  - `resources/sprites/DK_animated.gif`
-  - Nintendo 1981.
-  - https://www.pinterest.ca/pin/214202526006530945/
-  - Public Domain
+## Removed legacy assets
 
-* Floor
-  - `resources/sprites/floor.png`
-  - Nintendo 1981. 
-  - https://content.invisioncic.com/r322239/monthly_12_2011/post-26314-0-46104400-1324271742_thumb.png  Taken from platform in middle 
-  - Public Domain
+The fork originally inherited six sprite files from the upstream educational
+repository. Those files and all Java classes that loaded them were removed
+from this rebuild branch before publication of the replacement game.
 
-* Ladder
-  - `resources/sprites/ladder.png`
-  - Nintendo 1981.
-  - https://freekong.org/  Taken from ladder in game.
-  - Public Domain
+## Trademarks
 
-* Pauline
-  - `resources/sprites/pauline.gif`
-  - Nintendo 1981.
-  - https://sleepyeule.tumblr.com/post/166894537131/yet-another-reference-to-the-dk-arcade-game Taken from this image.
-  - Public Domain
-
-
-* Player
-  - `resources/sprites/player.gif`
-  - Nintendo 1981.
-  - https://pa1.narvii.com/7044/f779c14a3f8a9e3daf38c667249fa0c00f6f3673r1-1465-814_hq.gif Taken from this gif and clipped.
-  - Public Domain
+Donkey Kong and Nintendo are trademarks of their respective owners. They are
+not affiliated with, and do not endorse, APE ASCENT: Ironworks.

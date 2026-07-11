@@ -1,12 +1,10 @@
 /**
- * Provides the starter code for the <strong>cs1302-omega</strong> project.
+ * APE ASCENT: Ironworks.
  */
 module main {
-    requires transitive java.logging;
-    requires transitive java.net.http;
-    requires transitive javafx.controls;
-    requires transitive javafx.fxml;
-    requires transitive javafx.web;
-    exports Main.game;
-    exports Main.omega;
-} // module
+    requires javafx.controls;
+    requires java.logging;
+    requires java.prefs;
+
+    exports arcade;
+}
