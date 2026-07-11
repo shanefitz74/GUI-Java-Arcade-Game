@@ -1,27 +1,48 @@
 # APE ASCENT: Ironworks
 
-A JavaFX single-screen climbing arcade game built from the mechanics of the
-original `GUI-Java-Arcade-Game` educational project.
+A JavaFX single-screen climbing arcade game rebuilt from the basic movement
+concepts of the original `GUI-Java-Arcade-Game` educational project.
 
 This branch is a clean-room gameplay rebuild. It does **not** use Nintendo
-sprites, music, ROM data, names, or source code. All visible game art is drawn
-procedurally with JavaFX Canvas.
+sprites, music, ROM data, protected character names, or source code. All visible
+game art is drawn procedurally with JavaFX Canvas.
 
-## Current playable build
+## Four-board arcade campaign
 
-- Fixed-step game loop for consistent movement
-- Sloped girders and climbable ladders
-- Broken decorative ladders
-- Rolling barrels that fall between floors or randomly descend ladders
-- Run, jump, climb, falling, and collision physics
-- Hammer pickup and timed barrel smashing
-- Jump-over and hammer scoring
-- Three lives, extra life at 20,000 points, high-score persistence
-- Arcade-style bonus countdown
-- Four increasingly difficult stage loops
-- Title, pause, death, stage-clear, victory, and game-over states
-- Original vector/pixel-style characters and industrial artwork
+1. **Barrel Foundry** — climb sloped girders while rolling barrels fall between
+   floors or randomly descend complete ladders.
+2. **Conveyor Works** — alternating conveyor belts move the player and alter the
+   speed of roaming fire hazards.
+3. **Elevator Shaft** — cross open gaps using two independently moving lift
+   platforms while avoiding hazards on the side decks.
+4. **Rivet Reactor** — remove every gold rivet across four floors while fire
+   hazards patrol the board; clearing the final rivet wins the game.
+
+## Gameplay features
+
+- Fixed-step 120 Hz simulation for consistent movement
+- Run, jump, gravity, platform, ladder, and moving-elevator physics
+- Complete and broken ladders
+- Rolling, falling, and ladder-descending barrels
+- Conveyor belts with directional movement
+- Roaming fire hazards
+- Moving elevator platforms
+- Removable rivet objective
+- Hammer pickup with timed hazard destruction
+- Jump-over, hammer, rivet, stage-bonus, and extra-life scoring
+- Three lives and an extra life at 20,000 points
+- Persistent local high score
+- Arcade bonus countdown
+- Title, pause, death, board-clear, victory, and game-over states
+- Original procedural characters, effects, and industrial artwork
 - No external image or audio files required
+
+## Project structure
+
+- `ArcadeAscent.java` — JavaFX application and fixed-step loop
+- `GameEngine.java` — board setup, physics, hazards, scoring, and game states
+- `ArcadeRenderer.java` — Canvas rendering and interface screens
+- `GameModel.java` — shared rules, entities, and board data types
 
 ## Requirements
 
@@ -30,7 +51,7 @@ procedurally with JavaFX Canvas.
 
 ## Run
 
-### Windows
+### Windows PowerShell
 
 ```powershell
 .\mvnw.cmd clean javafx:run
@@ -42,7 +63,7 @@ procedurally with JavaFX Canvas.
 ./mvnw clean javafx:run
 ```
 
-You can also use a system Maven installation:
+A system Maven installation also works:
 
 ```bash
 mvn clean javafx:run
@@ -55,23 +76,18 @@ mvn clean javafx:run
 | Move | Left/Right arrows or A/D |
 | Climb | Up/Down arrows or W/S |
 | Jump | Space, Z, or J |
-| Start | Enter |
+| Start / continue | Enter |
 | Pause | P or Escape |
 
 ## Build check
 
 ```bash
-mvn --batch-mode clean package
+mvn --batch-mode --no-transfer-progress clean package
 ```
-
-## Project status
-
-The current rebuild delivers the complete barrel-board arcade loop. Planned
-follow-up boards are conveyors, moving lifts, and a removable-rivet finale.
 
 ## Originality notice
 
 APE ASCENT: Ironworks, Brassback, Nova, the mechanic character, all current
-rendered artwork, level data, and new gameplay code are original to this
-rebuild. Donkey Kong and Nintendo are trademarks of their respective owners
-and are not affiliated with this project.
+rendered artwork, board layouts, and new gameplay code are original to this
+rebuild. Donkey Kong and Nintendo are trademarks of their respective owners and
+are not affiliated with this project.
