@@ -1,14 +1,77 @@
-# GUI-Java-Arcade-Game
+# APE ASCENT: Ironworks
 
-## App Description
+A JavaFX single-screen climbing arcade game built from the mechanics of the
+original `GUI-Java-Arcade-Game` educational project.
 
-This application is a javafx game that is modeled after the classic arcade game DonkeyKong
-Users are able to move using the left and right keys, and jump using the space bar, they are also able to use the up key to move up ladders
-The goal is to avoid the moving barrels on each floor by jumping and getting to the ladders to climb up and reach pauline at the top
-If they hit a barrel they die and are prompted with a play again message. but if they reach the top they win and are able to play again.
-I learned a lot about game mechanics and how things work with each other.
+This branch is a clean-room gameplay rebuild. It does **not** use Nintendo
+sprites, music, ROM data, names, or source code. All visible game art is drawn
+procedurally with JavaFX Canvas.
 
-## Demo
-https://user-images.githubusercontent.com/50187038/219810396-24972afc-066c-483e-a87a-70e0bc52015b.mov
+## Current playable build
 
+- Fixed-step game loop for consistent movement
+- Sloped girders and climbable ladders
+- Broken decorative ladders
+- Rolling barrels that fall between floors or randomly descend ladders
+- Run, jump, climb, falling, and collision physics
+- Hammer pickup and timed barrel smashing
+- Jump-over and hammer scoring
+- Three lives, extra life at 20,000 points, high-score persistence
+- Arcade-style bonus countdown
+- Four increasingly difficult stage loops
+- Title, pause, death, stage-clear, victory, and game-over states
+- Original vector/pixel-style characters and industrial artwork
+- No external image or audio files required
 
+## Requirements
+
+- JDK 17 or newer
+- Maven 3.9 or the included Maven wrapper
+
+## Run
+
+### Windows
+
+```powershell
+.\mvnw.cmd clean javafx:run
+```
+
+### macOS or Linux
+
+```bash
+./mvnw clean javafx:run
+```
+
+You can also use a system Maven installation:
+
+```bash
+mvn clean javafx:run
+```
+
+## Controls
+
+| Action | Keys |
+|---|---|
+| Move | Left/Right arrows or A/D |
+| Climb | Up/Down arrows or W/S |
+| Jump | Space, Z, or J |
+| Start | Enter |
+| Pause | P or Escape |
+
+## Build check
+
+```bash
+mvn --batch-mode clean package
+```
+
+## Project status
+
+The current rebuild delivers the complete barrel-board arcade loop. Planned
+follow-up boards are conveyors, moving lifts, and a removable-rivet finale.
+
+## Originality notice
+
+APE ASCENT: Ironworks, Brassback, Nova, the mechanic character, all current
+rendered artwork, level data, and new gameplay code are original to this
+rebuild. Donkey Kong and Nintendo are trademarks of their respective owners
+and are not affiliated with this project.
